@@ -30,6 +30,17 @@ public class Movie implements Comparable<Movie> {
         return this.title;
     }
 
+    public int getYear() {
+        return year;
+    }
+    public int getLength() {
+        return length;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
     public String gotAward() {
         return award;
     }

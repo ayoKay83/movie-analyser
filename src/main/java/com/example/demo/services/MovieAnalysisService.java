@@ -33,7 +33,7 @@ public class MovieAnalysisService {
         Scanner in = new Scanner(movieList);
         Random r = new Random();
         ArrayList<Movie> randomMovieArray = new ArrayList<>();
-        //Skip 2 lines
+
         in.nextLine();
         in.nextLine();
 
@@ -49,10 +49,11 @@ public class MovieAnalysisService {
 
     public ArrayList<Movie> sortetByPopularity() throws FileNotFoundException {
         ArrayList<Movie> sortetArrList = new ArrayList<>();
+        //Selects 10 random movies and invoke CompareTo method in Movie class on each object
         for (int i = 0; i < 10; i++) {
             Movie m = getRandomMovieOfList();
             sortetArrList.add(m);
-        }   //CompareTo annotation in Movie model compares popularity
+        }
         Collections.sort(sortetArrList);
         return sortetArrList;
     }
